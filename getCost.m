@@ -14,6 +14,7 @@ for i=1:sim%%parfor
         [AverageO2, ~, ~] = getAverage(yout(:, 1), tout, timeBegin, timeEnd);
         cost1 = (max(abs(AverageO2 - 7.75) - 7.25, 0))^2;
         [AverageNADRatio, ~, ~] = getAverage(yout(:,12)./yout(:,13), tout,timeBegin, timeEnd);
+        cost2 = (max(abs(AverageNADRatio -350.5) - 349.5, 0))^2;
         [AverageSumNAD, ~, ~] = getAverage(yout(:,12)+yout(:,13), tout,timeBegin, timeEnd);
         cost3 = (min((AverageSumNAD/NAtot - 0.2), 0))^2;
         Atotyout = zeros(length(tout), 1) + Atot;

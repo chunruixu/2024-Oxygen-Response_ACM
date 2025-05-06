@@ -183,7 +183,7 @@ set(gca,'FontName','Times New Roman','FontSize',16);
      [score,scalary] = findSquares(TOUT2,NADsim,dpNAD);
      line(TOUT2, NADsim, 'Color', 'k', 'LineWidth', 2);
     hold on;
-     scatter(dpNAD(:,1),dpNAD(:,2).*scalary, 50,[0.09412 0.4549 0.80392],'o', 'LineWidth', 2);
+     scatter(dpNAD(:,1),dpNAD(:,2).*scalary, 100,[0.09412 0.4549 0.80392],'o','filled', 'LineWidth', 2);
       xlabel('Time after hypoxia (h)','fontsize',fontsize1); ylabel('NAD^{+}','fontsize',fontsize1);
       h = legend( 'simulation', 'Lim et al. 2010', 'Location', 'North','fontsize',fontsize1);%r106-34
 box on
